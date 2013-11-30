@@ -6,8 +6,7 @@ package com.viplav.financegeorgia.db;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
+
 
 /**
  * Hibernate Utility class with a convenient method to get Session Factory
@@ -25,10 +24,7 @@ public class HibernateUtil {
             // config file.
             //sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
             //sessionFactory = (SessionFactory) new InitialContext().lookup("SessionFactory");
-            Configuration configuration = new Configuration().configure();
-		//	ServiceRegistry serviceRegistry = new
-		//	ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
-			sessionFactory = configuration.buildSessionFactory();//serviceRegistry);
+            sessionFactory = new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {
             // Log the exception. 
             System.err.println("Initial SessionFactory creation failed." + ex);
