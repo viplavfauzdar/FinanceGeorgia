@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 30, 2013 12:39:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.viplav.financegeorgia.db.Location" table="location" catalog="financegeorgia">
+        <composite-id name="id" class="com.viplav.financegeorgia.db.LocationId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="userId" type="int">
+                <column name="user_id" />
+            </key-property>
+        </composite-id>
+        <property name="address" type="string">
+            <column name="address" length="45" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="45" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="45" />
+        </property>
+        <property name="zip" type="string">
+            <column name="zip" length="45" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="45" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" length="250" />
+        </property>
+        <property name="facebook" type="string">
+            <column name="facebook" length="250" />
+        </property>
+        <property name="googlePlus" type="string">
+            <column name="google_plus" length="250" />
+        </property>
+        <property name="twitter" type="string">
+            <column name="twitter" length="250" />
+        </property>
+        <property name="linkedin" type="string">
+            <column name="linkedin" length="250" />
+        </property>
+        <property name="phone1" type="string">
+            <column name="phone1" length="45" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile" length="45" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="45" />
+        </property>
+        <property name="createdate" type="timestamp">
+            <column name="createdate" length="19" />
+        </property>
+        <property name="updatedate" type="timestamp">
+            <column name="updatedate" length="19" />
+        </property>
+        <property name="deletedind" type="java.lang.Boolean">
+            <column name="deletedind" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 30, 2013 12:39:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.viplav.financegeorgia.db.Project" table="project" catalog="financegeorgia">
+        <composite-id name="id" class="com.viplav.financegeorgia.db.ProjectId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="userId" type="int">
+                <column name="user_id" />
+            </key-property>
+        </composite-id>
+        <property name="projectName" type="string">
+            <column name="project_name" length="100" />
+        </property>
+        <property name="summary" type="string">
+            <column name="summary" length="500" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" length="250" />
+        </property>
+        <property name="videoUrl" type="string">
+            <column name="video_url" length="250" />
+        </property>
+        <property name="image1" type="string">
+            <column name="image_1" length="45" />
+        </property>
+        <property name="image2" type="string">
+            <column name="image_2" length="45" />
+        </property>
+        <property name="image3" type="string">
+            <column name="image_3" length="45" />
+        </property>
+        <property name="targetAmount" type="java.lang.Integer">
+            <column name="target_amount" />
+        </property>
+        <property name="raisedAmount" type="java.lang.Integer">
+            <column name="raised_amount" />
+        </property>
+        <property name="commission" type="java.lang.Integer">
+            <column name="commission" />
+        </property>
+        <property name="approved" type="java.lang.Byte">
+            <column name="approved" />
+        </property>
+        <property name="createdate" type="timestamp">
+            <column name="createdate" length="19" />
+        </property>
+        <property name="updatedate" type="timestamp">
+            <column name="updatedate" length="19" />
+        </property>
+        <property name="deletedind" type="java.lang.Byte">
+            <column name="deletedind" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

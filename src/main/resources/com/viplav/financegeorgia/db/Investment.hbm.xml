@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 30, 2013 12:39:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.viplav.financegeorgia.db.Investment" table="investment" catalog="financegeorgia">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+        </property>
+        <property name="projectId" type="java.lang.Integer">
+            <column name="project_id" />
+        </property>
+        <property name="amount" type="java.lang.Integer">
+            <column name="amount" />
+        </property>
+        <property name="commission" type="java.lang.Integer">
+            <column name="commission" />
+        </property>
+        <property name="createdate" type="timestamp">
+            <column name="createdate" length="19" />
+        </property>
+        <property name="updatedate" type="timestamp">
+            <column name="updatedate" length="19" />
+        </property>
+        <property name="deletedind" type="java.lang.Byte">
+            <column name="deletedind" />
+        </property>
+    </class>
+</hibernate-mapping>

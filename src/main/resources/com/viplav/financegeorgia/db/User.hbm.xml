@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 30, 2013 12:39:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.viplav.financegeorgia.db.User" table="user" catalog="financegeorgia">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="roleId" type="java.lang.Integer">
+            <column name="role_id" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="45" />
+        </property>
+        <property name="mi" type="string">
+            <column name="mi" length="1" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" />
+        </property>
+        <property name="password1" type="string">
+            <column name="password1" length="45" />
+        </property>
+        <property name="image" type="string">
+            <column name="image" length="45" />
+        </property>
+        <property name="investorType" type="string">
+            <column name="investor_type" length="1" />
+        </property>
+        <property name="pptosnda" type="java.lang.Boolean">
+            <column name="pptosnda" />
+        </property>
+        <property name="createdate" type="timestamp">
+            <column name="createdate" length="19" />
+        </property>
+        <property name="updatedate" type="timestamp">
+            <column name="updatedate" length="19" />
+        </property>
+        <property name="deletedind" type="java.lang.Boolean">
+            <column name="deletedind" />
+        </property>
+        <property name="locked" type="java.lang.Byte">
+            <column name="locked" />
+        </property>
+        <property name="passresetKey" type="string">
+            <column name="passreset_key" length="45" />
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="10" />
+        </property>
+        <property name="aboutMe" type="string">
+            <column name="about_me" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>
