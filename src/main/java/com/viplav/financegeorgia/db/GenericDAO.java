@@ -59,6 +59,7 @@ public class GenericDAO<T> {
 		}
 	}
 
+        //lock is deperecated. 
 	public void attachClean(T instance) {
 		log.debug("attaching clean instance");
 		try {

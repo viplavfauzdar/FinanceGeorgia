@@ -5,9 +5,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Test</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Test</h1>
+        <form>
+            First Name: <input type="text" id="firstName" name="firstName">
+            <br>Last Name: <input type="text" id="lastName" name="lastName">
+            <br>Username: <input type="text" id="username" name="username">
+            <br><input type="submit">
+        </form>
+        <%
+        System.out.println("Console output");
+        %>
     </body>
 </html>
